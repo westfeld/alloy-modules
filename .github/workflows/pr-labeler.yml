@@ -3,7 +3,9 @@ name: Pull Request Labeler
 
 # yamllint disable-line rule:truthy
 on:
-  - pull_request_target
+  # zizmor: ignore[dangerous-triggers] This is safe because we are not running any untrusted code
+  # and setting minimal permissions required.
+  - pull_request_target 
 
 jobs:
   triage:
